@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//打印行数
+		// for(var i = 1 ; i <= 9 ; i ++){
+		// 	//打印列数
+		// 	for(var j = 1 ; j < i+1 ; j++){
+		// 		document.write(j +' * '+ i + '=' + j*i);
+		// 		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+		// 		if(j*i<10){
+		// 			document.write('&nbsp;&nbsp;');
+		// 		}
+		// 	}
+		// 	document.write('<br>');
+		// }
+
+
+		for(var i = 1 ; i <= 9 ; i ++){
+			for(var j = 1 ; j <= 9 ; j++){
+				if(j>i){
+					break;
+				}
+				document.write(j +' * '+ i + '=' + j*i);
+				document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+
+			}
+			document.write('<br>');
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

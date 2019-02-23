@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		
+		var arr = [5,12,3,2,4];
+		//轮数 4
+
+		//默认最小值为 下标为0 的位置
+		// var minIndex = 0;
+		// for(var i = 0 ; i < arr.length ; i ++){
+		// 	//从小到大排列
+		// 	if(arr[i]<arr[minIndex]){
+		// 		minIndex = i;
+		// 	}
+		// }
+		// console.log(minIndex);
+		// var temp = arr[0];
+		// arr[0] = arr[minIndex];
+		// arr[minIndex] = temp;
+
+
+		// minIndex = 1;
+		// for(var i = 1 ; i < arr.length ; i ++){
+		// 	//从小到大排列
+		// 	if(arr[i]<arr[minIndex]){
+		// 		minIndex = i;
+		// 	}
+		// }
+		// console.log(minIndex);
+		// var temp = arr[1];
+		// arr[1] = arr[minIndex];
+		// arr[minIndex] = temp;
+
+
+		var minIndex = 0 ;
+		for(var j = 0 ; j < arr.length-1; j++){
+			minIndex = j;
+			for(var i = j+1 ; i < arr.length ; i ++){
+				//从小到大排列
+				if(arr[i]<arr[minIndex]){
+					minIndex = i;
+				}
+			}
+			console.log(minIndex);
+			//可能存在 比完了最小下标并没有发生变化
+			if(minIndex!=j){
+				var temp = arr[j];
+				arr[j] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+	
+		}
+
+		console.log(arr);
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

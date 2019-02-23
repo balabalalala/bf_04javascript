@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//认识两个对象. 简单来说,在程序里 所有的一个整体 都可以认为是一个对象.
+		// 思想: 面向对象编程.  面向过程编程.
+		// 1. Date js内置对象.
+		// 这句话的作用: 通过关键词 new  创建了Date的一个实例对象.
+		// 什么叫实例对象?  
+		// 1. 人类    2. 张三   3.李四    张三和李四是人类的实例对象.
+		var date = new Date(); // 固定写法
+		// 对象.方法()   的语法调用实例对象的方法
+		var year2 = date.getYear();  //118 废弃.  因为最早是表示两位的年份,比如96 ,97 ,98(1998). 00(2000) 千年虫病毒.
+		var year = date.getFullYear();   // 年份 2018
+		var month = date.getMonth();  // 获取月份  0~11  
+		var day = date.getDate();   //日期
+		var hour = date.getHours();   // 小时
+		var min = date.getMinutes();  // 分钟
+		var sec = date.getSeconds();  // sec
+
+		var timeStr = year + '年' + (month+1) + '月' + day + '日' + hour + '时' + min + '分' + sec + '秒';
+		document.write('当前时间为: '+timeStr);
+		console.log('年==>'+year);
+		console.log('月==>'+month);
+		console.log('日==>'+day);
+		console.log('年2==>'+year2);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

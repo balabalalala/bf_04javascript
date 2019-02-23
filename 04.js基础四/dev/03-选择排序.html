@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。
+		var arr = [77,55,60,30,22];
+		var minIndex = 0;
+		for(var i = 1 ; i < arr.length ; i++){
+			//一一比较 获取最小下标
+			if(arr[minIndex] > arr[i]){
+				minIndex = i;
+			}
+		}
+		console.log('最小下表为===>'+minIndex);
+		var temp = arr[0];
+		arr[0] = arr[minIndex];
+		arr[minIndex] = temp;
+		console.log('第一次交换的结果为:');
+		console.log(arr);
+
+
+		var minIndex = 1;
+		for(var i = 2 ; i < arr.length ; i++){
+			//一一比较 获取最小下标
+			if(arr[minIndex] > arr[i]){
+				minIndex = i;
+			}
+		}
+		var temp = arr[1];
+		arr[1] = arr[minIndex];
+		arr[minIndex] = temp;
+		console.log('第二次交换的结果为:');
+		console.log(arr);
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

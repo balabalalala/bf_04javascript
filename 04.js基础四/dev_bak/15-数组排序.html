@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [5,12,3,2,4];
+		// 一般asc 升序，desc 降序
+		function  bubbleSortAsc(arr){
+
+			for(var  j = 0 ; j < arr.length-1 ; j++){
+				//每一轮的比较
+				for(var i = 0 ; i < arr.length-j ; i ++){
+					//从小到大
+					if(arr[i]>arr[i+1]){
+						var temp = arr[i];
+						arr[i] = arr[i+1];
+						arr[i+1] = temp;
+					}
+				}
+			}
+			//思考：如果传进来的参数arr受到了影响，那么嗨有必要返回arr吗？
+			// 先保留  基本数据类型和对象类型作为参数 那么对该参数的影响是不同的
+			//  对象类型的参数里面的操作会直接影响外部的该对象
+			//  基本数据类型作为参数进来，函数体内部会自动克隆一个新的副本，不会影响外部
+			return arr;
+		}
+
+		function getFirst(arr){
+			return arr[0];
+		}
+		bubbleSortAsc(arr);
+		// alert(bubbleSort(arr));
+		alert(getFirst(arr));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

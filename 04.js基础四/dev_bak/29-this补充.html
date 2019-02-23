@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var name='李四';
+		// f(x)==> x    f(5)
+		function User(x){
+			// var name='张三';
+			this.name = x;
+			console.log('这里打印user.name==>'+this.name);
+		}
+		// 有new的时候 this指向实例对象
+		// var zhangsan = new User('张三');
+		// var lisi = new User('李四');
+
+
+		window.User('王五'); // 王五
+		alert(name);  // 李四？ 王五
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

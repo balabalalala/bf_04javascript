@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/**
+		* 求任意值阶乘  n!
+		**/
+		function jc(n){
+			if(n==1){
+				return 1;
+			}
+			return n*jc(n-1);
+		}
+		/**
+		*  1!+2!+3!+...+n!
+		**/
+		function jcSum(n){
+			var sum = 0 ;
+			for(var i = 1 ; i<= n ; i ++){
+				// sum = sum + jc(i);
+				sum += jc(i);
+			}
+			return sum;
+		}
+		// 递归求和
+		function jcSum2(n){
+			if(n == 1){
+				return 1;
+			}
+			return jc(n)+jcSum2(n-1);
+		}
+
+		alert(jcSum2(4));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

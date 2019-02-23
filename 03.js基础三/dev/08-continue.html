@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 
+		for(var i = 0 ; i < 100 ; i++){
+			console.log('您是第'+i+'个客户..');
+			if(i>=50){
+				//结束当次循环.直接进入下一次.
+				continue;
+			}
+			console.log('您获取了米面油礼品...');
+		}
+		// 选班干部  班长  组长 委员
+		// 1. 如果有一个区长父亲,直接任班长
+		// 2. 如果是教育局长儿子,直接班委
+		// 3. 学习好,组长
+		// 4. 其他情况
+		for(var i = 0 ; i < 100 ; i ++){
+			// 伪代码
+			if(i.father == '局长'){
+				i = '班长';
+				continue;
+			}else if(i.father == '教育局'){
+				i = '班委';
+				continue;
+			}else {
+				if(score > 90){
+					i = '组长';
+					continue ;
+				}
+			}
+			console.log('普通学员..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+			console.log('您要遵守纪律哦..');
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

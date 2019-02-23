@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [3,5,7,10];
+		// splice 删除  返回删除的元素,直接影响到了arr
+		// 从下标为2开始,删除1个元素
+		var arr2 = arr.splice(2,1);
+		console.log(arr2);//[7]
+		console.log(arr);//[3,5,10]
+		// 删除并替换(了解)
+		var arr3 = arr.splice(2,1,'a','b');
+		console.log(arr3);//[10]
+		console.log(arr);//[3,5,'a','b']
+		//两种情况 清空数组
+		// arr = [];
+		arr.length = 0;
+		console.log(arr);//[]
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

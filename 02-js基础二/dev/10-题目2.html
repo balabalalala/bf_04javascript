@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 小题目：
+		// 判断用户输入的密码是否正确，如果是zhangsan ,123，那么就弹出正确；如果不是，就弹出错误
+		var username = prompt('请输入用户名');
+		var password = prompt('请输入密码');
+
+		if(username== 'zhangsan' && password == '123'){
+			alert('恭喜你,登陆成功!');
+		}else{   
+			// 1. 用户名和密码都错
+			// 2. 用户名错误
+			// 3. 密码错误
+			if(username!='zhangsan' && password != '123'){
+				alert('用户名和密码都错误!');
+			}else if(username!='zhangsan'){
+				alert('用户名错误!');
+			}else {
+				alert('密码错误!');
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

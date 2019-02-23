@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//script的执行环境是window对象
+		//在js中所有的数据类型  都用var声明
+		var name = '张三';
+
+		//函数是使用function声明
+		// 函数只声明不调用时不会执行的。
+		// 函数一般是我们封装的 一部分功能的代码块，帮我们完成特定工作
+		// 目前来说 自定义的函数不要写成大写开头
+		function say(){
+			alert('Hi,'+name);
+		}
+
+		function run(){
+			alert('I am  running...');
+		}
+		//调用函数  
+		//say方法是属于window对象 ，所有可以通过对象的形式调用。
+		window.say();
+		run();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

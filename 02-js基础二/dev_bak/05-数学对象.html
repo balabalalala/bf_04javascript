@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// Math提供的是静态方法，无需new
+
+		var num1 = 1.3333;
+		var num2 = 1.9999;
+		// ceil 天花板函数  用于小数向上取整
+		// 通过Math对象 调用 该对象的方法 ceil(); 括号里的是传进来的参数
+		console.log(Math.ceil(num1));
+		console.log(Math.ceil(num2));
+
+		//floor  地板函数
+
+		console.log(Math.floor(num1));
+		console.log(Math.floor(num2));
+
+		// max  / min
+
+		console.log(Math.max(1,7));
+		console.log(Math.max(1,7,2,28,10)); // 28
+
+		// 大转盘  random 函数  随机函数（伪随机） 区间 ： [0,1)  
+		console.log(Math.random());
+		//  求  1-10的随机数
+		// [0,1) * 10 ==> [0,10)   ==>  [Math.floor(0),Math.floor(10)] ==> [0,9]
+		console.log( Math.floor(Math.random()*10)+1);
+
+		// 平方
+		console.log(Math.pow(2,10));  
+
+		// 四舍五入
+		console.log(Math.round(1.3333));
+		console.log(Math.round(1.6666));
+		// round是四舍五入 但是对于float类型 可能出现舍入误差
+		// 这是计算机的原理导致的 
+		// 提醒： 对于敏感数据，高精度数据，金钱 不能使用round函数，如果真眼使用需要单独封装方法。
+		// 100元 ==》 10000 分
+		// 字符串绝对不会有问题
+		console.log(Math.round(1.49999999999999999));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

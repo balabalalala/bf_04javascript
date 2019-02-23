@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//数组里面的数据可以是任意类型，但是一般是同一种类型
+		var arr1 = [1,3,5];
+		var arr2 = ['a','b','c'];
+		// 1.合并 concat
+		var arr3 = arr1.concat(arr2);
+		console.log(arr1);
+		console.log(arr2);
+		console.log(arr3);
+			// 2. 把数组分为字符串  join
+			// join 可以有参数
+		var str = arr2.join('-');  // a-b-c
+		console.log(str);
+			// 3. 把字符串变为数组 split();
+		var arr4 = str.split('-'); 
+		var str2 = 'i am fine today!';
+		// 把字符串str2用空格打断
+		// 字符串的操作是所有语言中最常见的操作
+		var arr5 = str2.split(' ');
+		console.log(arr4);
+		console.log(arr5);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

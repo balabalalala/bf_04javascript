@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr =  [3,1,6,7,9];
+		var arr2 =  [3,1,6,7];
+
+		/**
+		* 作用： 求翻转
+		* @param arr  Array  
+		* return Array
+		**/
+		// 这个用于翻转数组
+		function reverse1(arr){
+			var arr2 = [];
+			// 举一反三 倒着数
+			for(var i = arr.length-1 ; i >=0 ; i--){
+				arr2.push(arr[i]);
+			}
+			return arr2;
+		}
+		
+
+		function  reverse2(arr){
+			//交换的次数
+			for(var i = 0 ;i < Math.floor(arr.length/2); i++){
+				var temp = arr[i];
+				arr[i] = arr[arr.length-1-i];
+				arr[arr.length-1-i] = temp;
+			}
+			return arr;
+		}
+
+		alert(reverse2(arr2));
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

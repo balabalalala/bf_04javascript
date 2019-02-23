@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 输入某年某月某日，判断这一天是这一年的第几天？（闰年）
+		// （四年一闰，百年不闰，四百年在闰）
+		// 只有在闰年的时候366天  在2月29天多一天
+		// 其余的时间2月都是28
+		// 1.是否是闰年
+		// 2.每个月多少天
+
+		//2月份多少天
+		var date = '2018-04-08';  // 366-1= 365
+
+		alert(getDate(date));
+
+
+		
+
+		// 1.判断闰年
+		function isRun(year){
+			return year%4==0 && year%100!=0 || year%400==0;
+		}
+
+		/**
+		* @param  date = 'yyyy-MM-dd';
+		*
+		**/
+		//补充：日期类型  yyyy-MM-dd hh-mm-ss sss
+		function getDate(date){
+			// split()  // 打断
+			var dateArr = date.split('-'); //[2012,10,08];
+			//parseInt  转换字符串为number
+			var yearStr = parseInt(dateArr[0]);
+			var monthStr = parseInt(dateArr[1]);
+			var dateStr = parseInt(dateArr[2]);
+
+			//判断是否是闰年
+			// var isRun = isRun(yearStr);
+			var monthes = [31,28,31,30,31,30,31,31,30,31,30,31];
+			if(monthStr<=2){
+				return (monthStr-1)*31+dateStr;
+			}else{
+				var rs = 0 ;
+				// 3月5号  31+28+5
+				for(var i = 0 ; i < monthStr-1 ;i++){
+					rs += monthes[i];
+				}
+				rs += dateStr;
+
+				return  isRun(yearStr)?(rs+1):rs;
+				// if(isRun){
+				// 	return rs+1;
+				// }else{
+				// 	return rs;
+				// }
+			}
+
+
+		}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

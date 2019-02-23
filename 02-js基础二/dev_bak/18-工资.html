@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 工作满0年		            发月薪的1倍月薪`年终奖，如果月薪大于8000，那么就是发1.2倍
+		// 工作满1年		            发月薪的1.5倍月薪年终奖，如果月薪大于10000，那么就是发1.7倍
+		// 工作满2年，甚至更多		发月薪的3倍月薪年终奖，如果月薪大于12000，那么就是发3.2倍
+
+		var year = prompt('请输入工作年龄：');
+		var salary = prompt('请输入工作月薪：');
+		//年终奖
+		var yearAward = 0;
+		if(year<1){
+			if(salary>8000){
+				yearAward = salary*1.2;
+				// alert(salary*1.2);
+			}else{
+				yearAward = salary;
+				// alert(salary);
+			}
+		}else  if(year<2){
+			if(salary>10000){
+				yearAward = salary*1.7;
+				// alert(salary*1.7);
+			}else{
+				yearAward = salary*1.5;
+				// alert(salary*1.5);
+			}
+
+		}else {
+			if(salary>12000){
+				yearAward = salary*3.2;
+				// alert(salary*3.2)
+			}else{
+				yearAward = salary*3;
+				// alert(salary*3)
+			}
+		}
+		alert(yearAward);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

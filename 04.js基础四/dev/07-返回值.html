@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 思考:什么时候需要return?
+		function add(x,y){
+			var sum = x+y;
+			var sum2 = sum;
+			var sum3 = sum2;
+			//返回值  在函数外部可以拿到函数内部的处理结果.
+			// console.log(sum);
+			return sum3;  // return 特点: return之后的代码 不再执行!!
+			// alert('终于干完了!');  
+		}
+		//有了return  就可以在函数外部 对函数处理结果随意处理.
+		// var rs = add(3,5);
+		add(3,5);
+		// alert(sum); 
+		alert(add(3,5));
+		console.log(add(5,8));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

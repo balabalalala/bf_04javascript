@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 2、输入某年某月某日，判断这一天是这一年的第几天？（闰年）
+		// 	四年一个闰年.
+		// 	只有在闰年的时候366天  在2月29天多一天
+		// 	其余的时间2月都是28
+		// 	1.是否是闰年
+		// 	2.每个月多少天
+
+		var dateStr = '2018-12-30';
+		// 1. new Date() 空的构造函数 返回一个date类型,表示是当前的时间
+		// 2. 如果传递了具体时间值'yyyy-MM-dd',返回一个yyyy-MM-dd对应的时间
+		var date = new Date(dateStr);
+		console.log(date);
+		//年份
+		var year = date.getFullYear(); 
+		//月份 4
+		var month = date.getMonth()+1;
+		// day 27
+		var day = date.getDate();
+
+		console.log(year+'年'+month+'月'+day+'日');
+		// 平年每月的天数
+		var months = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+		var rs = 0;
+		//月份之前的所有天数的和
+		for(var i = 0 ; i < month-1 ; i++){
+			rs += months[i];
+		}
+		// 把当月天数计算在内.
+		rs += day;
+
+		if(isRun(year)){
+			console.log('是闰年...')
+			if(month>2){
+				rs +=1;
+			}
+		}
+
+		console.log(dateStr+'在当年的第'+rs+'天');
+		/**
+		* 用于判断闰年
+		**/
+		function isRun(year){
+			return year%4==0;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

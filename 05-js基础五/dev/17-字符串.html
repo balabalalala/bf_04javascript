@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1.charAt 获取相应位置字符
+		var str = 'Hi  I am here!';
+		var char = str.charAt(0);
+		console.log(char);//H
+		// 2.charCodeAt  方法可返回指定位置的字符的 Unicode 编码
+		var charCode = str.charCodeAt(4);
+		console.log(charCode);//I所对应的Unicode 编码73
+		// 3. indexOf
+		var a = str.indexOf('I');
+		var b = str.lastIndexOf('e');
+		console.log('I indexOf ==>'+a);//4
+		console.log('e lastIndexOf ==>'+b);//12
+		// 4. concat()  连接符
+		console.log('a'.concat('bcd'));//abcd
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//函数的参数类型
+		// 1. 基本数据类型  number  string  boolean
+		// 2. 对象类型  array  object
+		//注意：作为参数传递的区别？ 基本数据类型在函数内部会被创建一个副本，不会影响外部的数据，但是对象类型传递的是该对象的一个引用（内存地址），所以修改的话是修改同一个对象。
+		// 3. 函数类型   这个是js独特的一点 java没有
+		var  age = 20;
+		var user = {
+			name:'张三'
+		}
+		function foo(n){
+			//副本
+			n ++;
+		}
+		foo(age); // age=？20
+
+		function bar(user){
+			//修改的是该对象的引用 指向同一个地址
+			user.name = '李四';
+		}
+		bar(user); // user.name = ?   '李四'
+		alert(user.name);
+
+		/**
+		* fn是一个函数类型，这种形式我们一般称fn为回调函数
+		**/
+		function add(a,b,fn){
+			var rs= a+b;
+			// sayAnswer(rs);
+			fn(rs);
+		}
+		// 什么时候用？怎么用？ajax会用，dom操作的时候，定时器
+		function sayAnswer(num){
+			alert('得到结果为：'+num);
+		}
+
+		add(3,5,sayAnswer);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

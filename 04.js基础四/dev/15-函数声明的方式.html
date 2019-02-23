@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		
+		// var sub;
+		console.log(sub)
+		console.log('add==>'+add(3,5));
+		console.log('sub==>'+sub);
+		// 1.自定义声明  可以先调用,后声明
+		function add(a,b){
+			return a+b;
+		}
+
+		// 2.匿名函数 必须先声明 后调用
+		//通过var 声明的变量  变量名会被提升.
+
+		 // sub = function(a,b){
+		var sub = function(a,b){
+			return a-b;
+		}
+		// sub(8,5);
+		console.log('sub==>'+sub(8,5));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

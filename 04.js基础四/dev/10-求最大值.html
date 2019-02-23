@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var num1  = 10;
+		var num2 = 20;
+		var num3 = 30;
+		// 1. 封装之前 首先思考类似的功能以前有没有封装 有的话直接使用
+		function getMax(a,b){
+			// 三元表达式
+			return a>b?a:b;
+		}
+
+		function getMax2(a,b,c){
+			return getMax(getMax(a,b),c);
+		}
+		alert(getMax2(num1,num2,num3));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

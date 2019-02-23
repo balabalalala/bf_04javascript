@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [10,9,4,5,3];
+
+
+		//默认最小值下标
+		var minIndex = 0 ;
+		//  比较的轮数
+		for(var i = 0 ; i < arr.length-1;i++){
+			minIndex = i;
+			// 每一轮 选出一个最小值
+			//  一个跟一个比 比完一轮 拿出最小值的下标
+			//狮子王  
+			for(var j = i+1 ; j < arr.length; j++){
+				if(arr[j]<arr[minIndex]){
+					minIndex = j;
+				}
+			}
+			console.log(minIndex);
+			//如果比了一圈下来 最小下标没变 那么久不需要交换位置
+			if(minIndex!=i){
+				// 一轮比完 选出最小值的下标
+				var temp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+			
+		}
+
+		console.log(arr);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

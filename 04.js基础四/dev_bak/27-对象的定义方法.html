@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1.对象的需求
+		//要求统计班级的年龄  性别  身高  住址...
+		// 1.字面量形式定义对象 简单 
+		var zhangsan = {
+			name:"张三",
+			age:20,
+			sex:0,
+			address:'郑州',
+			say:function(){
+				alert('Hi  I  am  here!');
+			},
+			run:function(){
+				alert('夕阳下的奔跑，是我失去的青春！');
+			}
+		}
+		var lisi = {
+			name:"李四",
+			age:20,
+			sex:0,
+			address:'郑州'
+		}
+
+		// 2.通过Object定义对象  Object是所有对象的顶级对象
+		var  wangwu = new Object();
+		wangwu.name = '王五';
+		wangwu.age = 20;
+		wangwu.sex = 0;
+		wangwu.say = function(){
+			alert('Hi , i  am   wangwu!');
+		}
+
+		// 3.通过自定义函数形式定义对象  //js中 万物皆对象  对象又皆函数
+		//注意：如果采用函数形式定义对象 首字母必须大写!
+		function User(){
+			
+		}
+		var user = new User();
+		user.name = '赵六';
+		alert(user.name);
+
+		//对象可以通过.的形式直接调用属性
+		// alert(zhangsan.name);
+		zhangsan.run();
+		wangwu.say();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

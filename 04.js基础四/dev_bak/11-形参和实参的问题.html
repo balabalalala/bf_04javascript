@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function add(a,b,c,d,e){
+			var f = e||100;
+			return a+b+c+d+f;
+		}
+		//如果实参的个数少于形参，而且函数内部并没有调用缺失的实参，那么不会影响
+		//如果实参比形参多，结果更不会报错，但是本质上讲程序已经出错！
+		alert(add(3,1,5,6,7,9,11,20));
+
+		//我们在开发的过程中，一般是采用形参=实参个数或者 形参>=实参个数（程序里就要做相应的判断）
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

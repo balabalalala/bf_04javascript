@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [33,22,11,27,17];
+		var arr2 = [33,22,11,27,17];
+		//比较的次数
+		for(var j = 0 ; j < arr.length-1; j ++){
+			//默认的最小下标;
+			var minIndex = j;  // [11,27,17]
+			//找到最小值的下标
+			for(var i = j+1 ; i < arr.length ; i ++){
+				if(arr[minIndex]>arr[i]){
+					minIndex = i;
+				}
+			}
+			// 最下下标改变的时候 才需要交互
+			// 程序的优化,控制取消不必要的运算,提高运行效率
+			if(minIndex != j){
+				var temp = arr[j];
+				arr[j] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+
+			console.log('最小下标位置为==>'+minIndex);
+			console.log(arr);
+		}
+		console.log('======最终结果======');
+		console.log(arr);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

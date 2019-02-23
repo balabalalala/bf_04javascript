@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//对象的形式保存数据
+		// 一个对象的属性称为key，当前属性的值称为value，key==value  键值对
+		var zhangsan = {
+			name:'张三',
+			age:20,
+			sex:true,
+			say:function(){
+				alert('my name is '+this.name);
+			}
+		}
+		// json形式保存数据
+		// 区别：json必须写双引号
+			// json是一般用于网络传输的，所以进行传输的时候都会被转成字符串
+		var zhangsanJson = {
+			"name":"张三",
+			"age":20,
+			"sex":true,
+			//不要这么做 
+			// "say":function(){
+			// 	alert('my name is '+this.name);
+			// }
+		}
+
+		// alert(zhangsanJson.age)
+		zhangsanJson.say();
+
+		// 普及：网络传输的数据包装形式 除了xml还有json
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var names = ['张三','李四','王五'];
+
+		names.push('赵六');
+
+		// 张三|李四|王五
+		var namesStr = names.join('|');
+		// alert(namesStr)
+		var nums = [2,1,3,10,6,7,];
+		var rs = 0;
+		for(var i = 0 ; i < nums.length ; i ++){
+			rs += nums[i];
+		}
+		alert(rs);
+
+		json就是数据格式 
+		目前来说  1对象  2json对象  3json字符串
+		1=2  
+
+		var user ={
+			name:'张三',
+			age:20,
+			say:function(){
+
+			}
+		}
+		var userJson = {
+			"name":"航三",
+			"age":30
+		}
+
+		var userJsonStr = '{"name":"航三","age":30}';
+		alert(userJsonStr.name);????  userJson.name
+		在使用的过程中是无差别的  user.name    userJson.name 
+		根据使用的作用，json是用来包装数据 进行网络传输的 一般吧json变为字符串
+
+		1. json字符串变为对象
+			userJson = JSON.parse(userJsonStr);
+		2. 对象变为json字符串
+			userJsonStr = JSON.stringify(userJson|user);
+
+
+
+		var namesStr2 = '';
+		for(var i = 0 ; i < names.length ; i++){
+			namesStr2 += names[i]+'|';
+		}
+		alert(namesStr2.substr(0,namesStr2.length-1));
+		
+		var add;
+		
+			
+
+
+		// function add(){
+
+		// }
+
+		add = function(){
+
+		}
+		add();
+
+
+		add();
+			
+		function  add(){
+
+		}
+
+
+		this: 1. this在js中是动态的，只有在程序运行的时候才知道指向了谁
+			  2. this指向调用者
+			  3. 如果是new出来的对象，那么该对象中的this指向new出来的对象本身
+
+		var name = '李四'; // 王五
+		function say(){
+			this.name = '王五';
+			var name = '赵六'; // 赵六
+			name = '陈奇'
+			console.log(this.name); //赵六   就近原则
+		} 
+		window.say();
+
+
+		function User(name,age){
+
+			this.name = name;
+			this.age = age;
+
+		}
+		var user = new User('张三',30);
+		user.name  // 王五
+		user.title // '这是标题'
+
+		// User(); // window.name = '王五''
+		// alert(name); //王五
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

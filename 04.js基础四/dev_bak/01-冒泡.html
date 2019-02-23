@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [5,12,3,2,4];
+		//轮数 4
+
+		for(var  j = 0 ; j < arr.length-1 ; j++){
+			//每一轮的比较
+			for(var i = 0 ; i < arr.length-j ; i ++){
+				//从小到大
+				if(arr[i]>arr[i+1]){
+					var temp = arr[i];
+					arr[i] = arr[i+1];
+					arr[i+1] = temp;
+				}
+			}
+			console.log(arr);
+		}
+		
+		
+		
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

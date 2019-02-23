@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var a = [3,6,33,7,10,18];
+		var b = [11,22,3,6,33,7,10,18];
+
+		
+		// 开发中 一般把自定义 函数放后面，前面放业务逻辑部分 
+		// var rs = avg(a);
+		// alert(rs);
+		alert(avg(a));
+		alert(avg(b));
+
+		function avg(arr){
+			var sum = 0 ;
+			for( var i = 0 ; i < arr.length ; i++){
+				// sum = sum + arr[i];
+				sum += arr[i];
+			}
+			return sum/arr.length;
+			// return 后面的代码不再执行没有意义！
+			alert('我还有话说！')
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

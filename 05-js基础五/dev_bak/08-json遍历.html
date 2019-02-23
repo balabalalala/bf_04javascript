@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var userJson = {
+			"name":"张三",
+			"age":20,
+			"sex":true
+		}
+
+		var arr = [2,1,3,6,7];
+		//数组的遍历有两种形式 一种是for(var  i = 0  ; i < arr.length ; i ++)
+		//  for(var a in arr){....}
+
+
+		// for...in的形式一般用于遍历对象
+		for(var a in  userJson){
+			// console.log(a);
+			//注意：取对象的属性一般使用.的形式，尤其注意如果属性是一个变量或者字符串，那么
+			// 需要使用[xx]的形式来取
+			console.log(a+'==>'+userJson[a]);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

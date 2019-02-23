@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// x,y 是形参,没有实际意义,只是占位符
+		function add(x,y){
+			console.log(x+y);
+		}
+		// 函数名相同 但参数不一样 方法的重载,在java中 会根据参数的个数找相应的函数
+		// 但是js没有方法重载,只会找最后声明的函数.
+		// 用的时候 一般实参和形参个数是相同的
+		function add(x,y,z){
+			console.log(x+y+z);
+		}
+		// 3,5实参
+		add(3,5);
+		//实参比形参多的情况...
+		add(3,5,7);
+		// 实参比形参少  错误!
+		add(3);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [35,20,18,11,99];
+
+		function minValue(arr){
+			var minIndex = 0 ;
+			for(var i = 0 ; i < arr.length ; i ++){
+				if(arr[minIndex]>arr[i]){
+					minIndex = i;
+				}
+			}
+
+			return arr[minIndex];
+		}
+		
+		var min = minValue(arr);
+		alert('最小值为==>'+min);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

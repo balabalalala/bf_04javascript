@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var x = 3;
+		var y = 5;
+		function add(){
+			var num1 = 10;
+			//xy访问的是 外部的x和y
+			//函数内部是可以访问外部变量的
+			return  x+y;
+		}
+
+		function cheng(){
+			//函数内部的变量 外部不能访问
+			// 每个函数体都有一个作用域  该作用域内可以访问外部作用域的变量，但外部或者其他作用域不能访问该作用域的变量
+			return num1*10;
+		}
+
+		function chu(){
+			// 隐式的全局变量  
+			//函数内部如果变量没有适用var声明 那么该函数默认是全局作用域的对象
+			// 实际上这种写法是错误的！只是js的语法不够严谨，所以我们应该尽量避免出现这样的写法。在es6的发展中，在严格模式下，这是会报错的！
+			num2 = 20;
+		}	
+
+
+		chu();
+		// add();
+		// alert(add());
+		// alert(cheng());
+		alert(num2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

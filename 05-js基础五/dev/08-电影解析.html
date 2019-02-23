@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="douban.js"></script>
+	<script>
+		console.log(movies);
+		var subjects = movies.subjects;
+		//哪部电影导演最多? 最多导演的下标
+		var maxDireIndex = 0;
+		for(var i = 0 ; i < subjects.length ; i ++){
+			var title = subjects[i].title;
+			//获取导演对象的数组.
+			var directors = subjects[i].directors;
+			//用每一个导演的个数 跟 当前最多的导演的电影比
+			if(directors.length>subjects[maxDireIndex].directors.length){
+				//吧当前的下标赋给最多导演的变量
+				maxDireIndex = i;
+			}
+
+			//作业==> 电影名称:<<西红柿首富>>,导演:闫非/彭大魔
+			//空的字符串 用于接受 导演的名称 的拼接结果.
+			var name = '';
+
+			for(var j = 0 ; j < directors.length ; j ++){
+
+				name += directors[j].name+'/';
+			}
+			//字符串截取
+			name = name.substr(0,name.length-1);
+			console.log((i+1)+'. 电影名称:<<'+title+'>>,导演:'+name);
+		}
+		console.log('=================');
+		console.log('电影:<<'+subjects[maxDireIndex].title+'>>,导演最多,一个'+subjects[maxDireIndex].directors.length);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

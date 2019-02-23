@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr  = [3,4,5,6,7];
+		//倒叙
+		function reverse(arr){
+			var arr2 = [];
+			for(var i = arr.length-1 ; i >=0 ; i --){
+				arr2.push(arr[i]);
+			}
+			return arr2;
+		}
+		// 翻转下标
+		function reverse2(arr){
+			// 5/2 == 2.5   4/2 = 2;
+			for(var i = 0 ; i < Math.floor(arr.length/2); i++){
+				var temp = arr[i];
+				arr[i] = arr[arr.length-1-i];
+				arr[arr.length-1-i] = temp;
+			}
+			//需要返回吗? 因为修改的是arr自己 所以不需要返回
+			// return arr;
+		}
+		// console.log(reverse2(arr));
+		reverse2(arr);
+		console.log(arr);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

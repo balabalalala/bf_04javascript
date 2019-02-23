@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [3,571,220,10];
+		//代码 具备可读性.
+		bubbleSort(arr);
+
+
+		/**
+		* 这是一个冒泡排序
+		**/
+		function bubbleSort(arr){
+			for(var i = 0 ; i<arr.length - 1;  i ++){
+				//每次循环  j的条件会发生变化,具体跟i有关系
+				//技巧: 临界情况,如果关系理不清楚,就找规律.
+				for(var j = 0 ; j < arr.length-1-i ; j ++){
+					if(arr[j]>arr[j+1]){
+						//交换位置
+						// js的垃圾回收机制 会定时检测不被使用到的变量 回收内存
+						var temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+					}
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

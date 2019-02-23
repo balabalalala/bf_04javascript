@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var  arr = [10,9,4,5,3];
+		//比较的次数
+		for(var i = 0 ; i < arr.length-1; i++){
+			//比较每一次的结果
+			for(var j = 0 ; j < arr.length-i; j++){
+				//比较相邻的元素 从小到大排列
+				if(arr[j]>arr[j+1]){
+					//交换位置
+					var temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+			console.log(arr);
+		}
+
+		console.log('end=======');
+		console.log(arr);
+		
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

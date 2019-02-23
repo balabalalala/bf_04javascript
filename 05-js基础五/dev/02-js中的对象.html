@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// js中所有的对象都是继承于 Object对象
+		// 1.js内置对象   Math   Date 
+		   // 2.自定义对象 
+		   // var obj = new Object();
+		   // 3.通过函数创建自定义对象
+		   // 对象就是函数 ;  函数就是对象
+
+		    // Human对象的构造函数 接受一个参数  name属性
+		    function Human(name){
+		    	// 把传递进来的name的值 赋给name属性
+		    	// this是一个关键词,在js中 this是一个很关键的问题.
+		   		this.name = name;
+		      	this.say = function(){
+		      		alert('Hi  i  am  '+this.name+'!');
+		      	}
+
+		    }
+		    // 1. this指向调用者
+		    // 2. 有new,如果是一个实例对象 this指向实例对象本身
+		   	var zhangsan = new Human('张三');
+		   	var lisi = new Human('李四');
+		   	// zhangsan.say();
+		   	lisi.say();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

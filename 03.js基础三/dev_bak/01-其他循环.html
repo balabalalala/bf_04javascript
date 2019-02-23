@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 循环的方式不只有for
+		var age = prompt('请输入年龄：');
+		console.log(typeof age);
+		//# 数据类型转换  转换为 int类型  
+		age = parseInt(age);
+		//  switch   跟if...else  比较像
+		// switch 判断 是严格区分数据类型的 不会隐式转换
+
+		// 思考：有了if...else  还要使用switch？ 一般习惯在枚举的时候 使用switch，而且代码逻辑清晰，更容易添加新的枚举类型。
+
+		// 1~3  3~5   5~7 7~10  if...else
+		// 3 5  6 9   switch 
+		switch(age){
+			case  10:
+
+				alert('您的年龄为10岁！');
+			break;
+
+			case  20:
+
+				alert('您的年龄为20岁！');
+			break;
+
+			default:
+				alert('您的年龄未知！');
+			break;
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

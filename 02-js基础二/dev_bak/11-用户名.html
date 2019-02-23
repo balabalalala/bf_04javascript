@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 要求判断用户名和密码 而且分别提示错误！
+		var name= '张三';
+		var pwd = '123';
+		// prompt阻塞了程序 
+		var nameStr = prompt('请输入用户名？');
+		// if...else... 嵌套语句
+		if(nameStr == name){
+			var pwdStr = prompt('请输入密码？');
+			//继续判断密码
+			if(pwdStr == pwd){
+				alert('恭喜你，登陆成功！');
+			}else{
+				alert('密码错误！');
+			}
+
+		}else{
+			alert('用户名错误！');
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

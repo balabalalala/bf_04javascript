@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1. toString 把数组转换为字符串
+		var arr = [1,13,25,6,17];
+		var arr2 = ['c','d','a','b'];
+		console.log(arr.toString());
+		// 2. sort 排序 
+		// sort参照的是字典排序
+		var rs = arr2.sort(function(a,b){
+			//字母排序 需要按照ascii排序，获取ascii  charCode
+			return b-a;
+		})
+		console.log(rs);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

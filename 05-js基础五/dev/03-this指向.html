@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var name = '李四';
+		//1.对象就是函数 函数也是对象
+		//2.一般用函数形式声明一个对象  首字母 必须大写 
+		function Human(){
+			this.name = '张三';
+			// window.name = '张三';
+		}
+
+		// 1.this指向new出来的实例对象
+		// var human1 = new Human();
+		// obj.xx ==> 可以获取对象的xx属性
+		// obj.xx() ===> 可以调用对象的xx方法
+		// 2. this指向调用者
+		window.Human();
+		// alert(human1.name);
+		window.alert(name)
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

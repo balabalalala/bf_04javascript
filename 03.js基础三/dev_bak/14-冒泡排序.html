@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1. 相邻的两位比较，如果顺序不对，则交换位置
+		// 2. 每一轮比较完毕后 会得到一个最大（最小值）
+		// 3. 继续进行前面的操作 直到没有可比的 结束
+
+		var  arr = [10,9,4,5,3];
+
+		for(var i = 0 ; i < arr.length ;  i++){
+			//从小到大拍
+			if(arr[i]>arr[i+1]){
+				//交换位置
+				var temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+			}
+		}
+		console.log(arr);
+
+		for(var i = 0 ; i < arr.length-1 ;  i++){
+			//从小到大拍
+			if(arr[i]>arr[i+1]){
+				//交换位置
+				var temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+			}
+		}
+
+		console.log(arr);
+
+		for(var i = 0 ; i < arr.length-2 ;  i++){
+			//从小到大拍
+			if(arr[i]>arr[i+1]){
+				//交换位置
+				var temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+			}
+		}
+
+		console.log(arr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

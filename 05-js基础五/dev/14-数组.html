@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [3,5,7,20,7,7,30,25];
+		var eNameArr = ['zhangsan','machale','john','scott','john','john'];
+		var index = -1;  //默认下标为-1;
+		//判断是否包含7
+		for(var i = 0 ;i < arr.length ; i ++){
+			if(arr[i] == 7){
+				index = i;
+			}
+		}
+		console.log(arr+'中7的下标为: '+index);
+
+		//数组的内置方法 获取 对应数值下标
+		var index2 = arr.indexOf(7);
+		console.log('index2==>'+index2);
+		var index3 = arr.lastIndexOf(7);
+		console.log('index3==>'+index3);
+		console.log('eNameArr.john==>'+eNameArr.indexOf('john'));
+		console.log('eNameArr.jack==>'+eNameArr.indexOf('jack'));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

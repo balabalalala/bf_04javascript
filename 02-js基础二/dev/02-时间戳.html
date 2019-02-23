@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var date = new Date();
+		// 东八时标准时间
+		console.log(date);
+		// 可通过getTime() 获取date的时间戳 ;这里的date是当前的时间.
+		// 时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数
+		// 作用: 针对单个用户的某次操作 设置唯一标识.
+		var timestamp = date.getTime();
+		console.log('当前时间戳为===>'+timestamp);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

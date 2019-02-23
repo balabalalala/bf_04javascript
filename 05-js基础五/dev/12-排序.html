@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//1.sort()  无参  按照数组元素的首字母的unicode编码从小到大排
+		var arr = [3,1,13,2,'a','A',11,8];
+		var arr2 = arr.sort();
+		console.log(arr2);
+
+		var arr3 = [3,1,13,20,8,4];
+		var arr4 = arr3.sort(function(a,b){
+			return b-a;
+		});
+		console.log(arr4);
+		var arr5 = ['a','abc','ab','abcde','abce'];
+		var arr6 = arr5.sort(function(a,b){
+			// 排序的条件.
+			return b.length - a.length ;
+		})
+		console.log(arr6);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

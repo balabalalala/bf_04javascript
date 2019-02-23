@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = ['a','b','c','d','a','e','b','e','c','c','b','a'];
+		//获取统计结果[['a','b','c'],[3,1,2]];
+		var rs = tj(arr);
+		var charArr = rs.charArr;
+		var charCount = rs.charCount;
+		console.log(charArr);
+		console.log(charCount);
+		//用于输出
+		for(var i = 0 ;i < charArr.length ; i ++){
+			console.log(charArr[i]+'===>'+charCount[i]);
+		}
+
+		function tj(arr){
+			//用于保存存在的个数
+			var charArr = [];
+			var charCount = [];
+			//用于统计
+			for(var i =  0 ; i < arr.length ; i ++){
+				//不存在 push
+				if(charArr.indexOf(arr[i])==-1){
+					//加入
+					charArr.push(arr[i]);
+					charCount.push(1);
+				}else{
+					// charArr已经包含 字符 arr[i] ; 找到charCount所对应的下标值 +1
+					var tempIndex = charArr.indexOf(arr[i]);
+					// console.log('__===>'+tempIndex)
+					// 修改次数  先++ 再使用
+					charCount[tempIndex] = ++charCount[tempIndex];
+				}	
+			}
+			//返回了二位数组
+			// return [charArr,charCount];
+			//返回一个对象
+			return {
+				charArr:charArr,
+				charCount:charCount
+			}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

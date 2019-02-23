@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		console.log(name);
+		//var 声明的变量会被程序提升到最顶端.
+		var name = '张三';
+
+		var age ;
+		console.log(age);
+		age = 30;
+
+		say();
+		// 自定义函数 可以先调用,后声明.
+		function say(){
+			console.log('Hi I am saying...');
+		}
+
+		//匿名函数一般需要先声明 ,后调用.
+		run();
+		var run = function(){
+			console.log('Hi I am running...');
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

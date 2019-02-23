@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [33,22,11,27,17];
+		// 冒泡排序
+		//比较的次数
+		for(var j = 0 ; j < arr.length-1; j ++){
+			// arr.length-(j+1) 如果能考虑清楚则考虑,如果不能则找规律
+			for(var i = 0 ; i < arr.length-(j+1) ; i ++){
+				if(arr[i]>arr[i+1]){
+					var temp = arr[i];
+					arr[i] = arr[i+1];
+					arr[i+1] = temp;
+				}
+			}
+			console.log(arr);
+		}
+		console.log('最终结果....');
+		console.log(arr);
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

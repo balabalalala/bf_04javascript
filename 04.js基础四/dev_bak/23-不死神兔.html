@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1 1 2 3 5 8 13 ...  斐波那契数列
+		function fb(n){
+				if(n == 1||n==2) return 1;
+				return fb(n-1)+fb(n-2);
+		}
+
+		// fb(1)==> 1;
+		// fb(2)==> 1;
+		// fb(3)==> fb(2)+fb(1)==>2
+		// fb(4)==> fb(3)+fb(2)==>3
+		// fb(5)==> fb(4)+fb(3)==>5
+		// ...
+
+		// 递归注意的问题： 如果数量太大 容易出现内存溢出的问题
+		alert(fb(100000));
+
+		// 伪代码 演示递归遍历文件夹 
+		// 需求，找出d盘中所有的.rmvb结尾的文件
+		var file = 'd:\\';
+		getRmvb(file);
+		/**
+		* 遍历文件夹  删除.rmvb文件
+		*
+		**/
+		function getRmvb(file){
+			// getFiles 伪代码 获取当前文件夹下所有的文件包括文件夹
+			var files = file.getFiles;
+			for(var i = 0 ; i < files.size ; i ++){
+				// 判断是否是文件类型
+				if(file[i].isFile){
+					if(files[i].endWith('rmvb')){
+						//删除某一个
+						files[i].delete();
+					}
+				}else{ //文件夹
+					getRmvb(file[i]);
+				}
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

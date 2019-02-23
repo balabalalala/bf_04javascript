@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 作业：var eNameArr = ['zhangsan','machale','john','scott','john','john'];
+		// 写个方法 要求 接受数组和字符串 取出该数组中所有该字符串的下标
+		var eNameArr = ['zhangsan','machale','john','scott','john','john'];
+		alert(getIndex(eNameArr,'johns'))
+
+		function  getIndex(arr,nameStr){
+			for(var i = 0 ; i < arr.length ; i ++){
+				if(arr[i] == nameStr){
+					return i;
+				}
+			}
+			return -1;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

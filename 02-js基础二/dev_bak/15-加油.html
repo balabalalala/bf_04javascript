@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 92号汽油，每升6元；如果大于等于20升，那么每升5.9；
+		// 95号汽油，每升7元；如果大于等于30升，那么每升6.95
+
+		// 1.获取油品类型？
+		var type = prompt('请输入油号,#92or#95');
+		// 2.请输入升数？
+		var count = prompt('请输入升数,单位L');
+		//单价
+		var price = 0;
+
+		// if(type==92){
+		// 	if(count<20){
+		// 		alert(6*count);
+		// 	}else{
+		// 		alert(5.9 * count);
+		// 	}
+
+		// }else if(type==95){
+		// 	if(count<30){
+		// 		alert(7*count);
+		// 	}else{
+		// 		alert(6.95*count);
+		// 	}
+		// }else{
+		// 	alert('没有您输入的油号！');
+		// }
+		// 改进版 查看逻辑运行的本质 到底是改变了什么 把冗余代码提出来 优化代码
+		if(type==92){
+			if(count<20){
+				price = 6;
+			}else{
+				price = 5.9;
+			}
+
+		}else if(type==95){
+			if(count<30){
+				price = 7;
+			}else{
+				price = 6.95;
+			}
+		}else{
+			//没有油号 取-1
+			price = -1 ;
+		}
+
+		if(price != -1){
+			alert('您的油费为：'+ price*count);
+		}else{
+			alert('对不起，没有您的油号！');
+		}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var eNameArr = ['zhangsan','machale','john','scott','john','john'];
+		//indexOf  获取某个值的下标位置
+		// alert(eNameArr.indexOf('john'));
+		// alert(eNameArr.lastIndexOf('john'));
+		// slice(start,end)   [start,end) 获取  不影响原来元素
+		var eNameArr2 = eNameArr.slice(0,2);
+		// splice(start,count) 从下标为start开始，截取count个元素,影响原来元素
+		// var eNameArr3 = eNameArr.splice(1,3);
+		// 删除scott?
+
+		// alert(eNameArr2);
+		// alert(eNameArr);
+		// splice 常用于删除数组的某一个元素
+		eNameArr.splice(eNameArr.indexOf('scott'),1);
+		alert(eNameArr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

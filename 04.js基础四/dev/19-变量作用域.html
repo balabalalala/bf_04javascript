@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// var age = 20;
+		function say(){
+			// 没有生命 所以是改了外部的age的值
+			//如果函数内部的变量 不声明  则会被认为是全局变量.
+			// 及时可用,也不提倡!! 在严格模式下 ,这是会报错的.
+			// 隐式全局变量
+			age = 30;
+			console.log('my age  is '+age);
+		}
+		say();
+		console.log(age);
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

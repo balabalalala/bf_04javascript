@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 1*1=1
+		// 2*1=2 2*2=4
+		// 3*1=3 3*2=6 3*3=9
+		// ...
+		for(var i = 1 ; i <= 9 ; i ++){
+			// console.log('当前行数为==>'+i);
+			var str = ''; // 某一行的内容
+			for(var j = 1 ; j <=i ; j ++){
+				// console.log('    第'+j+'列');
+				//换行了...
+				// console.log(i+'*'+j+'='+i*j);  // 1*2 = 2
+				str += (i+'*'+j+'='+i*j+'  ');
+			}
+			console.log(str);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

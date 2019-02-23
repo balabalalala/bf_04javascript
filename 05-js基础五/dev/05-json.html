@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// json key需要加双引号 
+		var json = '{"name":"张三","age": 20,"sex": true,"skill":["游泳","写代码"]}';
+		// console.log(json.name)
+		// 1.把对象==> json字符串
+		var UserObj = {name:'李四',age:30};
+		var userStr = JSON.stringify(UserObj);
+		console.log(userStr);
+			// 2.json字符串==> 对象
+		var jsonObj = JSON.parse(json);
+		console.log(jsonObj);
+		console.log(jsonObj.name);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

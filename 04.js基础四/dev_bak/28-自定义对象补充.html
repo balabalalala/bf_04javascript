@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 构造函数
+		function User(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.say = function(){
+				alert('Hi i am '+ this.name);
+			}
+		}
+		// this在js中是不确定的，只有在调用的时候才知道是谁，this指向调用者！
+		// js中对this的理解是很容易迷惑新手的，但是只要记住两条：
+		// 1. this指向调用者
+		// 2. 如果有new关键字  那么this指向new出来的对象本身
+		//zhangsan、lisi称为实例对象
+		var zhangsan = new User('张三',20,0);
+		var lisi = new User('李四',30,1);
+	
+		// alert(zhangsan.name);
+		// 构造函数必须通过new创建实例对象，才能通过实例对象调用相应的方法
+		// 比如： var date = new Date();   date.getFullYear();
+		zhangsan.say();
+		lisi.say();
+
+
+		function Date(){
+			this.getFullYear = function(){
+				return '2018'; //原生的算出来的
+			}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
